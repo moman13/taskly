@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:taskly/models/task.dart';
 import 'package:taskly/pages/home_page.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 void main() async {
-  await Hive.initFlutter("hive_boxs");
+  await Hive.initFlutter();
+  // var _box = await Hive.openBox("tasks");
+  // var _task = Task(content: "have fun", timestamp: DateTime.now(), done: false);
+  // _box.add(_task.toMap());
+
   runApp(const MyApp());
 }
 
